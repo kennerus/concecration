@@ -1,0 +1,38 @@
+.news {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	.news__block {
+		max-width: 380px;
+		min-width: 300px;
+		width: 15%;
+		.news__block-img {
+			width: 100%;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		.news__block-title {
+			h3 {
+				margin-top: 15px;
+				margin-bottom: 0px;
+				font-family: $gil-semibold;
+				font-size: 18px;
+			}
+		}
+
+		.news__block-description {
+			p {
+				margin-top: 5px;
+				font-family: $sans;
+				font-weight: 400;
+				font-size: 16px;
+			}
+		}
+	}
+}
+

@@ -1,0 +1,44 @@
+.products {
+	text-align: center;
+	.content-wrap {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.products__title {
+		margin-top: 100px;
+		h2 {
+			margin-bottom: 0;
+			font-family: $gil-light;
+			font-weight: normal;
+			font-size: 35px;
+		}
+	}
+
+	.products__describe {
+		margin-bottom: 100px;
+		p {
+			margin-bottom: 40px;
+			font-family: $gil-light;
+			font-size: 20px;
+			line-height: 29px;
+			letter-spacing: 1px;
+		}
+
+		a {
+			padding: 15px 30px;
+			font-family: $gil-medium;
+			font-size: 20px;
+			letter-spacing: 0.5px;
+			background-color: $purple;
+			color: white;
+			border: 1px solid $purple;
+			border-radius: 40px;
+			transition: background-color 200ms;
+			&:hover, &:active, &:focus {
+				background-color: $purple-hover;
+				transition: background-color 200ms;
+			}
+		}
+	}
+}
