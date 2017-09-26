@@ -1,0 +1,108 @@
+<section class="product-decription">
+	<div class="content-wrap column">
+		<div class="tab">
+			<button class="tablinks" id="defaultOpen" onclick="openCity(event, 'describe')">Описание</button>
+			<button class="tablinks" onclick="openCity(event, 'tech-describe')">Техническое описание</button>
+			<button class="tablinks" onclick="openCity(event, 'tech-gallery')">Галерея</button>
+			<button class="tablinks" onclick="openCity(event, 'gallery')">Техническая галерея</button>
+		</div>
+	</div>
+	<div id="describe" class="tabcontent">
+		<div class="content-wrap tabs">
+			<div class="describe">
+				<h2>C70-P</h2>
+				<p>Семейство тонких светильников Glamox 70 предназначено для обеспечения современных офисов светильниками с однородным и стильным дизайном: Встраиваемыми, устанавливаемыми на поверхность и подвесными, имеющими одинаковый внешний вид и вкус для  устанавки в коридорах и в залах заседаний, в офисах с открытой планировкой, в зонах регистрации гостиниц, общественных зонах и рабочих офисных ячейках.</p>
+				<p>Подвесные версии C70-P имеет очень тонкий корпус с гладкой поверхностью. Тонкий корпус стал возможным благодаря применению современных светодиодных технологий, требующих очень мало пространства, обеспечивая при этом свет исключительного качества.</p>
+				<p>Этот подвесной светильник будет хорошо смотреться в любой офисной среде, в том числе в рабочих офисных ячейках и конференц-залах. Он имеет распределение света - 40/60 (вверх / вниз) : Мощный направленный вверх свет (аплайт) обеспечивает общее освещение в комнате, в то время как направленный вниз свет (даунлайт) освещает поверхность стола в соответствии с Европейским стандартом для освещения рабочего места - EN 12464-1.</p>
+				<p>C70-P может быть оборудован системой  аварийного освещения и различными сенсорными системами.</p>
+				<p><strong>Доступные для рядного монтажа</strong><br>Glamox C70-P доступен для рядного монтажа. Светильники (отмеченные как TW) прикрепляются друг к другу с помощью специального кронштейна, который поставляется вместе со светильниками отмеченными как TW.</p>
+				<p><strong>Семейство светильников с модернистским дизайном и превосходным качеством света.</strong><br>Светильники C70 отливаются в форме цельной детали из высококачественного термопластичного полимерного материала. В результате получается бесшовный белый корпус с острыми углами и гладкой шелковистой поверхностью. Корпус устойчив к ультрафиолетовому излучению и не подвержен обесцвечиванию. Эти светильники останутся белыми и привлекательными в течение всего срока своей службы.</p>
+			</div>
+			<div class="download">
+				<form action="" method="post" id="documentation-form">
+					<legend class="download__title">Скачать</legend>
+					<div class="documentation">
+						<p>Документация</p>
+						<div class="instruction">
+							<div>
+								<input type="checkbox" id="instruction01">		
+								<label for="instruction01">Инструкция по эксплуатации</label>
+							</div>
+							<span class="instruction-size">729KB</span>
+						</div>
+						<div class="instruction">
+							<div>
+								<input type="checkbox" id="instruction02">
+								<label for="instruction02">Информация о продавце</label>
+							</div>
+							<span class="instruction-size">~3MB</span>
+						</div>
+					</div>
+					<div class="documentation">
+						<p>RFA Revit Files</p>
+						<div class="instruction">
+							<div>
+								<input type="checkbox" id="instruction03">
+								<label for="instruction03">Info-RFA-2D-symbols</label>
+							</div>
+							<span class="instruction-size">145KB</span>
+						</div>
+					</div>
+					<div class="documentation">
+						<p>RFA-Revit-Files</p>
+						<div class="instruction">
+							<div>
+								<input type="checkbox" id="instruction04">
+								<label for="instruction04">RFA-files</label>	
+							</div>					
+						</div>
+					</div>
+					<div class="download-btn">
+						<input type="submit" value="Скачать">
+					</div>
+				</form>
+			</div>
+		</div>
+			
+	</div>
+
+	<div id="tech-describe" class="tabcontent">
+		<h3>Paris</h3>
+		<p>Paris is the capital of France.</p>
+	</div>
+
+	<div id="gallery" class="tabcontent">
+		<h3>Tokyo</h3>
+		<p>Tokyo is the capital of Japan.</p>
+	</div> 
+
+	<div id="tech-gallery" class="tabcontent">
+		<h3>Tokyo</h3>
+		<p>Tokyo is the capital of Japan.</p>
+	</div> 
+	
+</section>
+<script type="text/javascript">
+	function openCity(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+	}
+	// Get the element with id="defaultOpen" and click on it
+	document.getElementById("defaultOpen").click();
+</script>

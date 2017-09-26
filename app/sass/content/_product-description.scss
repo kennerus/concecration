@@ -1,0 +1,140 @@
+.product-decription {
+	background-color: #bebebe;
+	.content-wrap.column {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.tabcontent {
+		width: 100%;
+	    display: none;
+	    padding: 6px 12px;
+	    background-color: white;
+		.tabs {
+			margin-bottom: 30px;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-start;
+			flex-wrap: wrap;
+			@include breakpoint(max-width 576px) {
+				max-width: 90vw;
+			}
+	    }
+
+	    .describe {
+	    	max-width: 700px;
+	    	font-family: $gil-light;
+	    	h2 {
+		    	font-weight: normal;
+		    	font-size: 30px;
+	    	}
+	    	
+	    	p {
+	    		font-family: $gil-regular;
+	    		font-size: 16px;
+	    		line-height: 24px;
+	    	}
+	    }
+
+	    .download {
+	    	width: 340px;
+	    	margin-top: 25px;
+	    	legend {
+	    		font-size: 24px;
+	    		color: $purple;
+	    		text-transform: uppercase;
+	    	}
+
+	    	.documentation {
+	    		@include breakpoint(max-width 400px) {
+	    			width: 85vw;
+	    		}
+	    		p {
+	    			margin-bottom: 5px;
+	    			font-family: $gil-medium;
+	    			font-size: 16px;
+	    			letter-spacing: 1px;
+	    		}
+	    	}
+
+	    	.instruction {
+	    		display: flex;
+	    		justify-content: space-between;
+	    		margin-left: 5px;
+	    		div {
+	    			min-width: 200px;
+	    			text-overflow: ellipsis;
+	    			white-space: nowrap;
+	    			overflow: hidden;
+	    		}
+	    		label {
+	    			position: relative;
+	    			bottom: 2px;
+	    			margin-bottom: 5px;
+	    			font-family: $gil-medium;
+	    			font-size: 16px;
+	    			letter-spacing: 1px;
+	    		}
+	    	}
+
+	    	.instruction-size {
+	    		position: relative;
+	    		top: 2px;
+	    		font-size: 10px;
+	    	}
+
+	    	.download-btn {
+	    		margin-top: 10px;
+	    		text-align: right;
+	    		input {
+		    		padding: 10px 30px;
+		    		font-family: $gil-medium;
+		    		font-size: 20px;
+		    		background-color: $purple;
+		    		color: white;
+		    		border-radius: 5px;
+		    		border: none;
+		    		&:hover, &:active, &focus {
+		    			background-color: $purple-hover;
+		    			cursor: pointer;
+		    		}
+		    	}
+	    	}
+	    }
+	} 
+
+	.tab {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	    overflow: hidden;
+	    background-color: #bebebe;
+		button {
+		    background-color: inherit;
+		    float: left;
+		    border: none;
+		    outline: none;
+		    cursor: pointer;
+		    padding: 20px 30px;
+		    transition: 0.3s;
+		    &:hover {
+			    background-color: white;
+			}
+
+			@include breakpoint(max-width 992px) {
+				width: 25%;
+			}
+			
+			@include breakpoint(max-width 768px) {
+				width: 50%
+			}
+
+			@include breakpoint(max-width 576px) {
+				width: 100%;
+			}
+		}
+		button.active {
+			background-color: white;
+		}
+	}	
+}

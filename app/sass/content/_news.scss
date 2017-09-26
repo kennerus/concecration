@@ -1,5 +1,6 @@
 .news {
 	width: 100%;
+	margin-top: 30px;
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
@@ -7,6 +8,9 @@
 		max-width: 380px;
 		min-width: 300px;
 		width: 15%;
+		@include breakpoint(max-width 320px) {
+			min-width: 90vw;
+		}
 		.news__block-img {
 			width: 100%;
 			img {

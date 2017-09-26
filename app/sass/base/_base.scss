@@ -76,5 +76,10 @@ textarea{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include breakpoint(max-width 1170px) {
+        max-width: 95vw;
+        width: 90vw;
+    }
 }
 
