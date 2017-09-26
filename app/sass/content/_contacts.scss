@@ -1,0 +1,36 @@
+.header-image {
+	width: 100%;
+	height: 455px;
+	background-image: url(../img/contacts-bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.contacts__menu,
+.links {
+	a, p {
+		font-family: $gil-regular;
+		font-size: 18px;
+		color: #282828;
+		line-height: 48px;
+	}
+
+	a {
+		&:hover, &:active, &focus {
+			text-decoration: underline;
+		}
+	}
+}
+
+.contacts__contact {
+	.contacts__title {
+		color: #282828;
+		h2 {
+			font-family: $gil-regular;
+			font-weight: normal;
+			font-size: 24px;
+		}
+
+		p
+	}
+}
