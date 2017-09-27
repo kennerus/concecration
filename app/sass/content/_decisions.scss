@@ -1,0 +1,39 @@
+.accordion {
+	padding: 10px 30px;
+	font-family: $gil-medium;
+	font-size: 18px;
+	background-color: transparent;
+	border: none;
+	text-transform: uppercase;
+	transition: 400ms;
+	&:hover {
+		color: $purple-hover;
+		cursor: pointer;
+	}
+}
+
+.active {
+	color: $purple;
+}
+
+.panel {
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+	ul {
+		list-style-type: none;
+		li {
+		margin: 10px 0;
+			a {
+				padding: 10px 20px;
+				color: #282828;
+				&:hover, &:active, &:focus {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+
