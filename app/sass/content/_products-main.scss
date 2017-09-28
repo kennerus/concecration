@@ -1,11 +1,11 @@
-.products {
+.prodicts-main {
 	text-align: center;
 	.content-wrap {
 		display: flex;
 		flex-direction: column;
 	}
 
-	.products__title {
+	.prodicts-main__title {
 		margin-top: 100px;
 		h2 {
 			margin-bottom: 0;
@@ -15,7 +15,7 @@
 		}
 	}
 
-	.products__describe {
+	.prodicts-main__describe {
 		margin-bottom: 100px;
 		p {
 			margin-bottom: 40px;

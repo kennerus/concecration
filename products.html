@@ -65,64 +65,161 @@
 
 <!-- start products.html-->
 <section class="products">
-	<div class="content-wrap">
+	<div class="content-wrap prod">
 		<div class="products__top">
 			<div class="products__top-title">
 				<h2>Продукция</h2>
 			</div>
 			<div class="products__top-color">
-				
+				<div class="color" id="grey"></div>
+				<div class="color" id="white"></div>
+				<div class="color" id="black"></div>
 			</div>
 		</div>
 		<div class="products__content">
-			<div class="products__product">
+			<div class="products__product grey">
 				<div class="products__product-img">
 					<img src="../img/lamp2.png" alt="">
 				</div>
-				<h3>
-					<a href="product.html">Relay based sensors</a>
-				</h3>
-				<a href="product.html">Продукт</a>
+				<div class="products__product-link">
+					<h3>
+						<a href="product.html">Relay based sensors</a>
+					</h3>
+					<a href="product.html">Продукт <span>&#160; &#62; </span></a>
+				</div>
 			</div>
-			<div class="products__product">
+			<div class="products__product grey">
 				<div class="products__product-img">
 					<img src="../img/lamp2.png" alt="">
 				</div>
-				<h3>
-					<a href="product.html">Relay based sensors</a>
-				</h3>
-				<a href="product.html">Продукт</a>
+				<div class="products__product-link">
+					<h3>
+						<a href="product.html">Relay based sensors</a>
+					</h3>
+					<a href="product.html">Продукт <span>&#160; &#62; </span></a>
+				</div>
 			</div>
-			<div class="products__product">
+			<div class="products__product white">
 				<div class="products__product-img">
 					<img src="../img/lamp2.png" alt="">
 				</div>
-				<h3>
-					<a href="product.html">Relay based sensors</a>
-				</h3>
-				<a href="product.html">Продукт</a>
+				<div class="products__product-link">
+					<h3>
+						<a href="product.html">Relay based sensors</a>
+					</h3>
+					<a href="product.html">Продукт <span>&#160; &#62; </span></a>
+				</div>
 			</div>
-			<div class="products__product">
+			<div class="products__product white">
 				<div class="products__product-img">
 					<img src="../img/lamp2.png" alt="">
 				</div>
-				<h3>
-					<a href="product.html">Relay based sensors</a>
-				</h3>
-				<a href="product.html">Продукт</a>
+				<div class="products__product-link">
+					<h3>
+						<a href="product.html">Relay based sensors</a>
+					</h3>
+					<a href="product.html">Продукт <span>&#160; &#62; </span></a>
+				</div>
 			</div>
-			<div class="products__product">
+			<div class="products__product black">
 				<div class="products__product-img">
 					<img src="../img/lamp2.png" alt="">
 				</div>
-				<h3>
-					<a href="product.html">Relay based sensors</a>
-				</h3>
-				<a href="product.html">Продукт</a>
+				<div class="products__product-link">
+					<h3>
+						<a href="product.html">Relay based sensors</a>
+					</h3>
+					<a href="product.html">Продукт <span>&#160; &#62; </span></a>
+				</div>
 			</div>
 		</div>
 	</div>
 </section>
+<script>
+	var active = document.getElementsByClassName('active-product');
+	var activeGrey = document.getElementsByClassName('grey');
+	var activeWhite = document.getElementsByClassName('white');
+	var activeBlack = document.getElementsByClassName('black');
+	var greySort = document.getElementById('grey');
+	var whiteSort = document.getElementById('white');
+	var blackSort = document.getElementById('black');
+
+
+	// greySort.onclick = function() {
+	// 	this.classList.toggle('active-product');
+	// 	var id = this.
+	// 	for(var i = 0; i < activeWhite.length; i++) {
+	// 		activeWhite[i].classList.toggle('inactive');
+	// 	}
+	// 	for(var i = 0; i < activeBlack.length; i++) {
+	// 		activeBlack[i].classList.toggle('inactive');
+	// 	}
+	// }
+
+
+
+	// whiteSort.onclick = function() {
+	// 	this.classList.toggle('active-product');
+	// 	for(var i = 0; i < activeGrey.length; i++) {
+	// 		activeGrey[i].classList.toggle('inactive');
+	// 	}
+	// 	for(var i = 0; i < activeBlack.length; i++) {
+	// 		activeBlack[i].classList.toggle('inactive');
+	// 	}
+	// }
+
+	// blackSort.onclick = function() {
+	// 	this.classList.toggle('active-product');
+	// 	for(var i = 0; i < activeWhite.length; i++) {
+	// 		activeWhite[i].classList.toggle('inactive');
+	// 	}
+	// 	for(var i = 0; i < activeGrey.length; i++) {
+	// 		activeGrey[i].classList.toggle('inactive');
+	// 	}
+	// }
+
+	// var color = document.getElementsByClassName('color');
+
+	// this.color.onclick = function() {
+	// 	var colorID = e.target.id;
+
+	// 	this.classList.add('active-product');
+	// 	sortByColor(colorID);
+	// }
+
+	// function sortByColor(color) {
+	// 	var products = document.getElementsByClassName('products__product');
+
+	// 	for(var i = 0; i < products.length; i++) {
+	// 		if (products.matches('.color')) {
+	// 			this.style.display="block";
+	// 		}
+	// 		else {
+	// 			this.style.display="none";
+	// 		}
+	// 	}
+	// }
+
+	// $(document).on('click', '.color', function() {
+	// 	var color = $(this).attr('id');
+
+	// 	sortByAttr(color);
+	// });
+
+	// function sortByAttr(color) {
+	// 	var products = $('.products__product');
+
+	// 	products.each(function(){
+	// 		if ($(this).hasClass(color)) {
+	// 			$(this).show();
+	// 		} else {
+	// 			$(this).hide();
+	// 		}
+	// 	});
+	// }
+
+
+</script>
 <!-- end products.html-->
 
 <!-- close container-->
