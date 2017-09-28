@@ -16,7 +16,7 @@
 
 	.news__content {
 		display: flex;
-		justify-content: space-between;
+		/*justify-content: space-between;*/
 		align-items: center;
 		flex-wrap: wrap;
 		@include breakpoint(max-width 1200px) {
@@ -26,9 +26,12 @@
 		.news__content-container {
 			max-width: 370px;
 			width: 90vw;
+			margin-right: 30px;
 			margin-bottom: 50px;
 			font-family: $gil-regular;
-
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
 			.news__img {
 				max-width: 370px;
 				width: 85vw;
