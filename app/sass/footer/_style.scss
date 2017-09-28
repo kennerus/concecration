@@ -22,6 +22,10 @@
 			justify-content: flex-start;
 		}
 
+		@include breakpoint(max-width 576px) {
+			margin-left: 20px;
+		}
+
 		@include breakpoint(max-width 400px) {
 			width: 220px;
 		}

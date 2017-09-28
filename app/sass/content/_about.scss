@@ -10,30 +10,37 @@
 
 	.content-wrap.align-start {
 		margin-top: 40px;
+		flex-wrap: nowrap;
 		@include breakpoint(max-width 576px) {
 			max-width: 90vw;
 			width: 90vw;
+			flex-wrap: wrap;
 		}
 		.about__links {
 			width: 220px;
 			margin-right: 40px;
-			h4 {
-				font-family: $gil-regular;
-				font-size: 18px;
-			}
+		}
 
-			p {
-				margin: 30px 0;
-				a {
-					font-family: $gil-medium;
-					font-size: 18px;
-					color: #282828;
-					&:hover, &:active, &:focus {
-						text-decoration: underline;
-						opacity: 0.7;
-					}
-				}
+		.tab {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: flex-start;
+		   	overflow: hidden;
+			.tablinks {
+				width: 220px;
+				margin: 20px 0;
+			    border: none;
+			    cursor: pointer;
+			    transition: 0.3s;
+			    background-color: transparent;
+				text-align: left;
+			    &:hover {
+			    	color: $purple;
+			    }
+
 			}
+			
 		}
 
 	}
@@ -42,6 +49,14 @@
 		max-width: 830px;
 		width: 90vw;
 		margin-bottom: 80px;
+		@include breakpoint(max-width 1050px) {
+			max-width: calc(90vw - 250px);
+		}
+
+		@include breakpoint(max-width 576px) {
+			max-width: 90vw;
+		}
+
 		h2, h3 {
 			font-family: $gil-semibold;
 			font-size: 24px;
@@ -59,4 +74,22 @@
 			line-height: 1.5;
 		}
 	}
+
+	.tabcontent {
+	    animation: fadeEffect 1s;
+	}
+}
+
+.active {
+	color: $purple;
+}
+
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
