@@ -27,7 +27,6 @@
 					margin-right: 0;
 				}
 				&:hover {
-					border-color: red;
 					cursor: pointer;
 				}
 			}
@@ -97,16 +96,6 @@
 				}
 			}
 			
-		}
-
-		.active-grey,
-		.active-white,
-		.active-black {
-			display: block;
-		}
-
-		.inactive {
-			display: none;
 		}
 	}
 }

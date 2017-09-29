@@ -5,13 +5,14 @@
 				<h2>Продукция</h2>
 			</div>
 			<div class="products__top-color">
+				<!-- <div class="color" id="showAll">Показать все</div> -->
 				<div class="color" id="grey"></div>
 				<div class="color" id="white"></div>
 				<div class="color" id="black"></div>
 			</div>
 		</div>
 		<div class="products__content">
-			<div class="products__product grey">
+			<div class="products__product active" data-color="white">
 				<div class="products__product-img">
 					<img src="img/lamp2.png" alt="">
 				</div>
@@ -22,7 +23,7 @@
 					<a href="product.html">Продукт <span>&#160; &#62; </span></a>
 				</div>
 			</div>
-			<div class="products__product grey">
+			<div class="products__product active" data-color="grey">
 				<div class="products__product-img">
 					<img src="img/lamp2.png" alt="">
 				</div>
@@ -33,7 +34,7 @@
 					<a href="product.html">Продукт <span>&#160; &#62; </span></a>
 				</div>
 			</div>
-			<div class="products__product white">
+			<div class="products__product active" data-color="white">
 				<div class="products__product-img">
 					<img src="img/lamp2.png" alt="">
 				</div>
@@ -44,7 +45,7 @@
 					<a href="product.html">Продукт <span>&#160; &#62; </span></a>
 				</div>
 			</div>
-			<div class="products__product white">
+			<div class="products__product active" data-color="black">
 				<div class="products__product-img">
 					<img src="img/lamp2.png" alt="">
 				</div>
@@ -55,7 +56,7 @@
 					<a href="product.html">Продукт <span>&#160; &#62; </span></a>
 				</div>
 			</div>
-			<div class="products__product black">
+			<div class="products__product active" data-color="grey">
 				<div class="products__product-img">
 					<img src="img/lamp2.png" alt="">
 				</div>
@@ -70,87 +71,62 @@
 	</div>
 </section>
 <script>
-	var active = document.getElementsByClassName('active-product');
-	var activeGrey = document.getElementsByClassName('grey');
-	var activeWhite = document.getElementsByClassName('white');
-	var activeBlack = document.getElementsByClassName('black');
-	var greySort = document.getElementById('grey');
-	var whiteSort = document.getElementById('white');
-	var blackSort = document.getElementById('black');
+	document.addEventListener('DOMContentLoaded', function() {
+		// получение массива активных элементов
+		function getElemetsByAttr(attr) {
+			var arr = [];
+			var elements = document.getElementsByTagName('*');
+			for(var i = 0; i < elements.length; i++) {
+				if(elements[i].hasAttribute(attr)) {
+					arr.push(elements[i]);
+				}
+			}
+			return arr;
+		}
 
+		// получение цвета при клике на кнопку
+		var colorBtn = document.querySelectorAll('.color');
+		for(var i = 0; i < colorBtn.length; i++) {
+			colorBtn[i].onclick = function(event) {
+				this.classList.toggle('activeAttr');
+				toggleBlocks('data-color');
+			};
+		}
 
-	// greySort.onclick = function() {
-	// 	this.classList.toggle('active-product');
-	// 	var id = this.
-	// 	for(var i = 0; i < activeWhite.length; i++) {
-	// 		activeWhite[i].classList.toggle('inactive');
-	// 	}
-	// 	for(var i = 0; i < activeBlack.length; i++) {
-	// 		activeBlack[i].classList.toggle('inactive');
-	// 	}
-	// }
+		// получение активных выбранных атрибутов, кнопки
+		function getActiveAttr() {
+			var arrActive = [];
+			var active = document.getElementsByClassName('activeAttr');
+			for(var i = 0; i < active.length; i++) {
+				arrActive.push(active[i].id);
+			}
+			return arrActive; 
+		}
 
+		// выбор из массива определённых цветов
+		function in_array(what, where) {
+		    for(var i = 0; i < where.length; i++)
+		        if(what == where[i])
+		            return true;
+		    return false;
+		}
 
-
-	// whiteSort.onclick = function() {
-	// 	this.classList.toggle('active-product');
-	// 	for(var i = 0; i < activeGrey.length; i++) {
-	// 		activeGrey[i].classList.toggle('inactive');
-	// 	}
-	// 	for(var i = 0; i < activeBlack.length; i++) {
-	// 		activeBlack[i].classList.toggle('inactive');
-	// 	}
-	// }
-
-	// blackSort.onclick = function() {
-	// 	this.classList.toggle('active-product');
-	// 	for(var i = 0; i < activeWhite.length; i++) {
-	// 		activeWhite[i].classList.toggle('inactive');
-	// 	}
-	// 	for(var i = 0; i < activeGrey.length; i++) {
-	// 		activeGrey[i].classList.toggle('inactive');
-	// 	}
-	// }
-
-	// var color = document.getElementsByClassName('color');
-
-	// this.color.onclick = function() {
-	// 	var colorID = e.target.id;
-
-	// 	this.classList.add('active-product');
-	// 	sortByColor(colorID);
-	// }
-
-	// function sortByColor(color) {
-	// 	var products = document.getElementsByClassName('products__product');
-
-	// 	for(var i = 0; i < products.length; i++) {
-	// 		if (products.matches('.color')) {
-	// 			this.style.display="block";
-	// 		}
-	// 		else {
-	// 			this.style.display="none";
-	// 		}
-	// 	}
-	// }
-
-	// $(document).on('click', '.color', function() {
-	// 	var color = $(this).attr('id');
-
-	// 	sortByAttr(color);
-	// });
-
-	// function sortByAttr(color) {
-	// 	var products = $('.products__product');
-
-	// 	products.each(function(){
-	// 		if ($(this).hasClass(color)) {
-	// 			$(this).show();
-	// 		} else {
-	// 			$(this).hide();
-	// 		}
-	// 	});
-	// }
-
+		// включение/выключение блоков
+		function toggleBlocks(attr) {
+			var arrBlocks = getElemetsByAttr(attr);
+			var activeAttrs = getActiveAttr();
+			
+			
+			for ( var i = 0; i < arrBlocks.length; i++) {
+				var dataAttr = arrBlocks[i].getAttribute(attr);
+				if(in_array(dataAttr, activeAttrs)) {
+					arrBlocks[i].style.display = 'block';
+				}
+				else {
+					arrBlocks[i].style.display = 'none';
+				}
+			}
+		}
+});
 
 </script>

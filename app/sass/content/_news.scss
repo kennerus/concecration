@@ -35,13 +35,23 @@
 			.news__img {
 				max-width: 370px;
 				width: 85vw;
+				&:hover, &:active, &:focus {
+					opacity: 0.8;
+				}
 			}
 
-			.news__title {
+			.news__title a {
 				margin: 20px 0 0;
 				font-family: $gil-semibold;
 				font-weight: normal;
 				font-size: 24px;
+				color: #282828;
+				transition: all 0.2s;
+				&:hover, &:active, &:focus {
+					text-decoration: underline;
+					opacity: 0.8;
+					transition: all 0.2s;
+				}
 			}
 
 			.news__describe {
