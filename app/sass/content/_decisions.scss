@@ -102,8 +102,16 @@
 			h3 {
 				margin: 0;
 				font-weight: normal;
-				font-size: 24px;
-				text-transform: uppercase;
+				a {
+					font-size: 24px;
+					text-transform: uppercase;
+					color: #282828;
+					&:hover, &:active, &:focus {
+						text-decoration: underline;
+						opacity: 0.8;
+					}
+				}
+				
 			}
 
 			p {
@@ -116,6 +124,7 @@
 				color: #202020;
 				&:hover, &:active, &:focus {
 					text-decoration: underline;
+					color: 0.8;
 				}
 			}
 		}

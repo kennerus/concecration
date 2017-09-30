@@ -43,30 +43,62 @@
 				text-decoration: underline;
 			}
 		}
+
+		.tablinks {
+			display: block;
+			padding: 15px 0;
+			font-family: $gil-medium;
+			font-size: 18px;
+			background-color: transparent;
+			color: #282828;
+			border: none;
+			&:hover {
+				cursor: pointer;
+				color: $purple-hover;
+				text-decoration: underline;
+			}
+		}
+
+		.active {
+			color: $purple;
+		}
+	}
+
+	.tab {
+		margin-top: 10px;
+	}
+
+	.tabcontent {
+		display: none;
+		animation: fadeEffect 1s;
 	}
 
 	.contacts__contact {
+		max-width: 560px;
+		width: 90vw;
+		margin-bottom: 50px;
 		display: flex;
 		flex-direction: column;
+		color: #282828;
 		@include breakpoint(max-width 1100px) {
 			align-items: center;
 		}
 
-		.contacts__title {
-			max-width: 560px;
-			width: 90vw;
-			color: #282828;
-			h2 {
-				margin-top: 20px;
-				font-family: $gil-regular;
-				font-weight: normal;
-				font-size: 24px;
-			}
+		h2, h3 {
+			margin-top: 20px;
+			font-family: $gil-regular;
+			font-weight: normal;
+			font-size: 24px;
+		}
 
-			p {
-				font-family: $gil-regular;
-				font-size: 18px;
-			}
+		p {
+			font-family: $gil-regular;
+			font-size: 18px;
+		}
+
+		.contacts__title {
+
+
 
 			.mail {
 				font-size: 11px;
@@ -118,7 +150,6 @@
 
 				input[type="submit"] {
 					margin-top: 10px;
-					margin-bottom: 50px;
 					font-size: 20px;
 					background-color: $purple;
 					color: white;
@@ -131,4 +162,9 @@
 			}
 		}
 	}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }

@@ -65,19 +65,14 @@
 <section class="contacts">
 	<div class="header-image"></div>
 	<div class="content-wrap cont">
-		<aside class="contacts__menu">
-			<p>
-				<a href="#">Контакты</a>
-			</p>
-			<p>
-				<a href="#">Контакт</a>
-			</p>
-			<p>
-				<a href="#">Дилеры </a>
-			</p>
+		<aside class="contacts__menu tab">
+			<button class="tablinks" id="defaultOpen" onclick="openCity(event, 'contacts')">Контакты</button>
+			<button class="tablinks" onclick="openCity(event, 'contact')">Контакт</button>
+			<button class="tablinks" onclick="openCity(event, 'dilers')">Дилеры</button>
 		</aside>
-		<div class="contacts__contact">
-			<div class="contacts__title">
+		<div id="contacts" class="contacts__contact tabcontent">
+			<div class="tabs">
+				<div class="contacts__title">
 				<h2>Контакты</h2>
 				<p>Воспользуйтесь on-line формой запроса внизу страницы, если хотите задать вопросы по продукции, попросить выслать бумажный каталог или буклеты и пр. </p>
 				<p class="mail">Электронная почта: <a href="mailto:info.ru@glamox.com">info.ru@glamox.com</a></p>
@@ -105,6 +100,29 @@
 					<input id="submit" type="submit" name="submit" value="Отправить">
 				</form>
 			</div>
+			</div>
+		</div>
+		<div id="contact" class="contacts__contact tabcontent">
+			<div class="tabs">
+				<h3>Контакт</h3>
+				<div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis dignissimos, beatae sequi earum soluta quod magni error excepturi quis, fugiat possimus deserunt autem maiores dicta aliquam illum iure, porro quisquam.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum autem cum, qui, laborum reprehenderit provident. Esse delectus incidunt odio nulla omnis quidem quas mollitia cum ut iste earum rerum reprehenderit autem odit ipsam maxime accusantium minus, tempora atque dolores quia! Ut illum hic, adipisci nemo porro, tempora recusandae! Consequatur eligendi, facilis consequuntur dolores quidem odio cum impedit fugiat possimus deserunt autem illo vel eius deleniti cumque? Fugiat facilis excepturi quia consequuntur hic velit laudantium earum dicta laborum fuga similique itaque nesciunt officia ut at iure in aspernatur est, minima vero sit tempore tempora molestias corporis. Non voluptas magni, quod impedit.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique corporis, a ut temporibus excepturi quaerat. Impedit eligendi quam iste ab vitae voluptatem accusantium vel quae. Atque placeat nesciunt ratione impedit, aliquam, et aspernatur asperiores distinctio, quam reprehenderit iste optio. Quos ea veritatis cum quaerat doloribus voluptates itaque ratione tempore, culpa odit odio deleniti molestias ipsum eligendi sequi asperiores, dolores, temporibus inventore! Quod voluptatibus iste recusandae ad ea, sunt, tempore culpa error quidem et facere laudantium sed. Voluptatem, dolores.</p>
+				</div>
+			</div>
+		</div>
+		<div  id="dilers" class="contacts__contact tabcontent">
+			<div class="tabs">
+				<h3>Дилеры</h3>
+				<div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, natus quae iusto iste consectetur quibusdam id nemo saepe quos totam culpa ullam animi fuga accusamus consequatur aliquid. Quia architecto consequuntur, velit fuga praesentium debitis quo fugiat, officia distinctio a rerum accusantium cum, aliquid optio tempora alias accusamus voluptatibus doloremque repellendus ea. Aliquam distinctio ut repellendus incidunt qui sapiente a mollitia excepturi cumque nemo perferendis asperiores harum assumenda, facere suscipit accusantium esse atque aspernatur quam est porro facilis. At quod sed minima mollitia reiciendis illo eligendi alias inventore quis, fugiat.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente tempora deserunt dolore ad ea nostrum minus maiores laudantium, sit debitis pariatur repudiandae magni neque minima non quas! Quam delectus a laboriosam, ab inventore consectetur error perspiciatis minus soluta, culpa deleniti iusto alias tenetur temporibus in esse, odit ipsum laudantium corporis possimus iure eligendi suscipit. Optio minima culpa est dolor, dicta laudantium saepe blanditiis ea aut, aliquid modi quae atque asperiores expedita vitae excepturi. Impedit beatae, doloremque quo mollitia vel. Distinctio quam facere praesentium minima inventore, officia perferendis hic. Quis tenetur animi fuga provident cupiditate maiores itaque maxime molestias beatae fugiat!</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum facere eligendi illo ad esse dolore veniam nisi architecto sunt, deleniti aliquid, sequi odit a, magni error. Fuga fugiat ea dolorum laudantium laborum quasi cumque esse unde corporis animi accusantium tenetur iure nihil ex, aspernatur laboriosam nisi saepe minima.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt natus blanditiis voluptates, alias illum molestias ducimus hic commodi soluta quam! Odio sed sapiente sit dignissimos autem ad rem voluptas distinctio quaerat magni earum necessitatibus ipsa sint quam ipsum optio veritatis harum, assumenda libero reiciendis nostrum non quisquam. Consequatur ut similique dolorum quam, non dolore amet a ducimus quibusdam reiciendis voluptatem natus doloribus asperiores aut, deleniti quaerat excepturi aspernatur saepe, nisi voluptates obcaecati est, ratione in. Reiciendis cupiditate deserunt nobis error similique! Ducimus veritatis, nemo placeat excepturi cum odio quasi magnam vitae dicta fugiat, commodi dolore aliquid molestias! Mollitia tenetur ducimus, doloremque assumenda quos odit dignissimos, provident facere, dolore voluptatem vel. Odio in fugiat assumenda dolores excepturi est, minus hic voluptatibus obcaecati dicta nisi sunt ipsam. Impedit architecto voluptatibus, aliquid excepturi ipsum tenetur, necessitatibus numquam ipsam voluptates voluptate sit obcaecati rerum!</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, cum rem expedita perferendis quam facere veniam id nemo iure, in praesentium sit, consequuntur quo cumque quos. Qui, molestias esse!</p>
+				</div>
+			</div>
 		</div>
 		<aside class="links">
 			<p>
@@ -119,6 +137,33 @@
 		</aside>
 	
 </section>
+
+<script>
+
+	function openCity(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+	}
+	// Get the element with id="defaultOpen" and click on it
+	document.getElementById("defaultOpen").click();
+</script> 
+
 <!-- end contacts.html-->
 
 <!-- close container-->
