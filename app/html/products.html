@@ -14,7 +14,7 @@
 		<div class="products__content">
 			<div class="products__product active" data-color="white">
 				<div class="products__product-img">
-					<img src="img/lamp2.png" alt="">
+					<img src="img/lamp2.png" alt="product">
 				</div>
 				<div class="products__product-link">
 					<h3>
@@ -25,18 +25,18 @@
 			</div>
 			<div class="products__product active" data-color="grey">
 				<div class="products__product-img">
-					<img src="img/lamp2.png" alt="">
+					<img src="img/lamp2.png" alt="product">
 				</div>
 				<div class="products__product-link">
 					<h3>
-						<a href="product.html">Relay based sensors111</a>
+						<a href="product.html">Relay based sensors</a>
 					</h3>
 					<a href="product.html">Продукт <span>&#160; &#62; </span></a>
 				</div>
 			</div>
 			<div class="products__product active" data-color="white">
 				<div class="products__product-img">
-					<img src="img/lamp2.png" alt="">
+					<img src="img/lamp2.png" alt="product">
 				</div>
 				<div class="products__product-link">
 					<h3>
@@ -47,7 +47,7 @@
 			</div>
 			<div class="products__product active" data-color="black">
 				<div class="products__product-img">
-					<img src="img/lamp2.png" alt="">
+					<img src="img/lamp2.png" alt="product">
 				</div>
 				<div class="products__product-link">
 					<h3>
@@ -58,7 +58,7 @@
 			</div>
 			<div class="products__product active" data-color="grey">
 				<div class="products__product-img">
-					<img src="img/lamp2.png" alt="">
+					<img src="img/lamp2.png" alt="product">
 				</div>
 				<div class="products__product-link">
 					<h3>
@@ -88,8 +88,17 @@
 		var colorBtn = document.querySelectorAll('.color');
 		for(var i = 0; i < colorBtn.length; i++) {
 			colorBtn[i].onclick = function(event) {
-				this.classList.toggle('activeAttr');
-				toggleBlocks('data-color');
+			    if(this.className !== 'color activeAttr') {
+                    this.classList.add('activeAttr');
+                    toggleBlocks('data-color');
+                }
+                else {
+                    this.classList.remove('activeAttr');
+                    var bg = getElemetsByAttr('data-color');
+                    for (var i = 0; i < bg.length; i++) {
+                        bg[i].style.display = 'block';
+                    }
+                }
 			};
 		}
 
@@ -99,8 +108,7 @@
 			var active = document.getElementsByClassName('activeAttr');
 			for(var i = 0; i < active.length; i++) {
 				arrActive.push(active[i].id);
-			}
-			return arrActive; 
+			}return arrActive;
 		}
 
 		// выбор из массива определённых цветов
@@ -115,8 +123,6 @@
 		function toggleBlocks(attr) {
 			var arrBlocks = getElemetsByAttr(attr);
 			var activeAttrs = getActiveAttr();
-			
-			
 			for ( var i = 0; i < arrBlocks.length; i++) {
 				var dataAttr = arrBlocks[i].getAttribute(attr);
 				if(in_array(dataAttr, activeAttrs)) {

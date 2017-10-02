@@ -2,6 +2,7 @@
 	min-height: calc(100vh - 270px);
 	flex-direction: column;
 	align-items: flex-start;
+    justify-content: flex-start;
 	.products__top {
 		width: 100%;
 		display: flex;
@@ -99,4 +100,16 @@
 			
 		}
 	}
+}
+
+.active {
+	display: block;
+}
+
+.hide {
+	display: none;
+}
+
+.activeAttr {
+  border-color: #036cdb;
 }
