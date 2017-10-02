@@ -62,6 +62,7 @@
 <!-- main container-->
 
 <!-- start products.html-->
+<script src="../../gulpfile.js"></script>
 <section class="products">
 	<div class="content-wrap prod">
 		<div class="products__top">
@@ -151,19 +152,21 @@
 		// получение цвета при клике на кнопку
 		var colorBtn = document.querySelectorAll('.color');
 		for(var i = 0; i < colorBtn.length; i++) {
-			colorBtn[i].onclick = function(event) {
-			    if(this.className !== 'color activeAttr') {
-                    this.classList.add('activeAttr');
-                    toggleBlocks('data-color');
-                }
-                else {
-                    this.classList.remove('activeAttr');
-                    var bg = getElemetsByAttr('data-color');
-                    for (var i = 0; i < bg.length; i++) {
-                        bg[i].style.display = 'block';
-                    }
-                }
-			};
+            colorBtn[i].onclick = function(event) {
+//                if(this.className !== 'color activeAttr') {
+//                    this.classList.add('activeAttr');
+//                    toggleBlocks('data-color');
+//                }
+//                else {
+//                    this.classList.remove('activeAttr');
+//                    var bg = getElemetsByAttr('data-color');
+//                    for (var i = 0; i < bg.length; i++) {
+//                        bg[i].style.display = 'block';
+//                    }
+//                }
+                this.classList.toggle('activeAttr');
+                toggleBlocks('data-color');
+            };
 		}
 
 		// получение активных выбранных атрибутов, кнопки
@@ -192,6 +195,9 @@
 				if(in_array(dataAttr, activeAttrs)) {
 					arrBlocks[i].style.display = 'block';
 				}
+				else if(activeAttrs.length == 0) {
+				    arrBlocks[i].style.dysplay = 'block';
+                }
 				else {
 					arrBlocks[i].style.display = 'none';
 				}
