@@ -1,13 +1,15 @@
 .news-main {
 	width: 100%;
 	margin-top: 30px;
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
+	.content-wrap.justify-news {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
 	.news-main__block {
 		max-width: 380px;
-		min-width: 300px;
-		width: 15%;
+		min-width: 280px;
+		width: 24%;
 		@include breakpoint(max-width 320px) {
 			min-width: 90vw;
 		}
@@ -48,3 +50,6 @@
 	}
 }
 
+.content-wrap {
+	align-items: flex-start;
+}

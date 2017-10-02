@@ -1,5 +1,6 @@
 .content-wrap.new {
 	flex-wrap: wrap;
+	min-height: calc(100vh - 270px);
 	h2 {
 		width: 100%;
 		font-family: $gil-regular;

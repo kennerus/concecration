@@ -1,4 +1,5 @@
 .content-wrap.prod {
+	min-height: calc(100vh - 270px);
 	flex-direction: column;
 	align-items: flex-start;
 	.products__top {
